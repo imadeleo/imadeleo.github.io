@@ -13,7 +13,7 @@ window.onload = function(){
         menu_bar.classList.toggle('is-active');
     })
     const music_btn = document.querySelector('.music');
-    const audio = new Audio('../audio/Don_Toliver_No_Idea_(thinkNews.com.ng).mp3');
+    const audio = new Audio('audio/Don_Toliver_No_Idea.mp3');
     const spin = document.querySelector('.fa-brands');
     music_btn.addEventListener('click', function(e){
         audio.play();
