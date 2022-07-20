@@ -42,3 +42,11 @@ window.onload = function(){
 })
 }
 
+
+// music_btn.addEventListener('click', function(e){
+//     audio.play();
+//     spin.classList.add('fa-flip');
+//     document.querySelector('.vol').style= "--fa-beat-scale: 1.3; color:rgb(8, 239, 216)";
+//     document.querySelector('.vol-txt').style= "color:rgb(8, 239, 216)";
+//     document.querySelector('.vol-txt').innerHTML = "ON";
+    

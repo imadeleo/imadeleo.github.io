@@ -53,7 +53,7 @@ header a:hover{
     display: block; 
     background-color: rgb(24,24,24,0.9);
     z-index: 1;
-    padding-top: 120px;
+    padding-top: 150px;
     transition: 0.4s;
 }
 .menubar.is-active {
@@ -87,7 +87,6 @@ header a:hover{
 #home{
     margin: 90px 40px 40px 40px;
     position: relative;
-    text-align: center;
 }
 #first{
     font-size: 4rem;
@@ -102,75 +101,9 @@ header a:hover{
     animation: fadeInUp 1s ease-out 10ms forwards;
 }
 
-#first span:hover {
+#first span:hover{
     color: rgb(8, 239, 216);
 }
-/* #first span{
-    -webkit-animation: jello-vertical 0.9s both;
-    animation: jello-vertical 0.9s both;
-}
- @-webkit-keyframes jello-vertical {
-    0% {
-      -webkit-transform: scale3d(1, 1, 1);
-              transform: scale3d(1, 1, 1);
-    }
-    30% {
-      -webkit-transform: scale3d(0.75, 1.25, 1);
-              transform: scale3d(0.75, 1.25, 1);
-    }
-    40% {
-      -webkit-transform: scale3d(1.25, 0.75, 1);
-              transform: scale3d(1.25, 0.75, 1);
-    }
-    50% {
-      -webkit-transform: scale3d(0.85, 1.15, 1);
-              transform: scale3d(0.85, 1.15, 1);
-    }
-    65% {
-      -webkit-transform: scale3d(1.05, 0.95, 1);
-              transform: scale3d(1.05, 0.95, 1);
-    }
-    75% {
-      -webkit-transform: scale3d(0.95, 1.05, 1);
-              transform: scale3d(0.95, 1.05, 1);
-    }
-    100% {
-      -webkit-transform: scale3d(1, 1, 1);
-              transform: scale3d(1, 1, 1);
-    }
-  }
-  @keyframes jello-vertical {
-    0% {
-      -webkit-transform: scale3d(1, 1, 1);
-              transform: scale3d(1, 1, 1);
-    }
-    30% {
-      -webkit-transform: scale3d(0.75, 1.25, 1);
-              transform: scale3d(0.75, 1.25, 1);
-    }
-    40% {
-      -webkit-transform: scale3d(1.25, 0.75, 1);
-              transform: scale3d(1.25, 0.75, 1);
-    }
-    50% {
-      -webkit-transform: scale3d(0.85, 1.15, 1);
-              transform: scale3d(0.85, 1.15, 1);
-    }
-    65% {
-      -webkit-transform: scale3d(1.05, 0.95, 1);
-              transform: scale3d(1.05, 0.95, 1);
-    }
-    75% {
-      -webkit-transform: scale3d(0.95, 1.05, 1);
-              transform: scale3d(0.95, 1.05, 1);
-    }
-    100% {
-      -webkit-transform: scale3d(1, 1, 1);
-              transform: scale3d(1, 1, 1);
-    }
-  }
-   */
-
 #first {
 	-webkit-animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 	        animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
@@ -212,83 +145,37 @@ header a:hover{
     margin: 25px auto;
     letter-spacing: 5px;
    
-
 }
 #type{
     position: relative;
-    text-align: center;
     width: fit-content;
-    margin-left: 1%;
-
 }
-#type::before,
-#type::after {
+#type{
+    position: relative;
+    width: max-content;
+}
+#type::before { 
     content: "";
     position: absolute;
-    top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-color:  rgb(24,24,24);
+    border-left: 2px solid rgb(8, 239, 216);
+    animation: typing 7s steps(32) infinite;
 }
-#type::before{
-    background: rgb(24,24,24);
-    animation: typewriter 6s steps(32) 1s forwards;
-}
-#type::after{
-    width: 0.125em;
-    background:  rgb(8, 239, 216);
-    animation: typewriter 6s steps(32) 1s forwards,
-    blink 800ms steps(32) infinite;
-}
-#home button{
-    color: rgb(8, 253, 216);
-    padding: 15px 35px;
-    border: 1px solid rgb(8, 239, 216);
-    border-radius: 4px;
-    background-color: transparent;
-    letter-spacing: 4px;
-    margin-top: 35px;
-    color: rgb(8, 239, 216);
-    opacity: 0;
-    transform: translateX(-10rem);
-    animation: fadeInUp 2s ease 7s forwards; 
-}
-#home button:hover{
-    border: 1px solid rgb(8, 239, 216);
-    background-color: rgb(8, 239, 216);
-    font-weight: 600;
-    color:black;
-    border-radius: 4px;
-}
-@keyframes typewriter {
-    to {
+@keyframes typing {
+    100%{
         left: 100%;
+        margin: 0 5px 0 5px;
     }
-}
-@keyframes blink {
-    to {
-        background: transparent;
-    }
-}
+} 
 @keyframes fadeInUp {
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
-/* #third{
-    position: absolute;
-    right: 0;
-    margin-right: 10px;
-    margin-top: 20px;
-    
-}
-#third img{
-    width: 15rem;
-    height: 16rem;
-    border-radius: 20%;
-} */
-
 #home button{
     color: rgb(8, 253, 216);
     padding: 15px 35px;
@@ -300,36 +187,9 @@ header a:hover{
     position: relative;
     width: max-content;
     margin-top: 50px;
-    margin-left: 35%;
+    transform: translateX(-17rem);
+    animation: fadeInUp 1s ease-out 7s forwards;
 }
-.container {
-	-webkit-animation: tracking-in-expand 7s cubic-bezier(0.550, 0.055, 0.675, 0.190) both;
-	        animation: tracking-in-expand 7s cubic-bezier(0.550, 0.055, 0.675, 0.190) both;
-}
- @-webkit-keyframes tracking-in-expand {
-    0% {
-      letter-spacing: -0.5em;
-      opacity: 0;
-    }
-    40% {
-      opacity: 0.6;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  @keyframes tracking-in-expand {
-    0% {
-      letter-spacing: -0.5em;
-      opacity: 0;
-    }
-    40% {
-      opacity: 0.6;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
   
 input{
     position: relative;
@@ -376,42 +236,33 @@ input{
     color: white;
     font-weight: 600;
     border: none;
-    color: black;
-    
+    color: black;  
     
 }
 .container:hover {
     border: none;
     
 }
-@media (max-width: 700px) {
-    body{
-        margin: 15px;
-        overflow-x: hidden;
-    }
-    #menu{
-        display: block;
-        position: absolute;
-        right: 0;
-        cursor: pointer;
-    }
-    #navbar{
+#third{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 10px;
+    
+}
+#third img{
+    width: 15rem;
+    height: 16rem;
+    border-radius: 20%;
+}
+@media (max-width: 1000px) {
+    header nav{
         display: none;
     }
-    #home{
-        flex-wrap: wrap;
-        margin: 50px 20px;
-        text-align: center;
+    #third {
+        position: relative;
+        padding-top: 25px;
     }
-    #first{
-        font-size: 2rem;
-        line-height: 3rem;
-    }
-    #type{
-        margin-left: 16%;
-        flex-shrink: 3%;
-    }
- 
     .hamburger{
         position: absolute;
         margin-top: -5px;
@@ -442,31 +293,6 @@ input{
     }
     .hamburger.is-active:after{
         transform: rotate(45deg) translate(-9px, -5.4px);
-    }
-    
-}
-@media (min-width: 701px) and (max-width: 857px){
-    #type{
-        margin-left: 16%;
-    }
-    
-}
-@media (min-width: 300px) and (max-width: 464px){
-    #first span{
-        font-size: 25px;
-        font-weight: 300;
-    }
-    #type{
-        font-size: 8px;
-        margin: 0px;
-    }
-    .container{
-        margin: 25%;
-
-    }
-    input{
-        font-size: 11px;
-        padding: 5px 9px;
     }
     
 }
