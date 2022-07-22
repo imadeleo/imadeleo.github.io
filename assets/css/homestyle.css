@@ -162,7 +162,7 @@ header a:hover{
     width: 100%;
     background-color:  rgb(24,24,24);
     border-left: 2px solid rgb(8, 239, 216);
-    animation: typing 7s steps(32) infinite;
+    animation: typing 7s steps(32) forwards;
 }
 @keyframes typing {
     100%{
@@ -255,14 +255,60 @@ input{
     height: 16rem;
     border-radius: 20%;
 }
+div > svg{
+    margin-left: -90px;
+    margin-right: -90px;
+    margin-bottom: -30px;
+}
+#skills{
+    background-color: #0f0f0fe6;
+    margin: -20px;
+}
+#skills h2{
+    margin: 0px 20px 10px 20px;
+}
+.skill-row{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.skil{
+    border: 1px solid rgb(8, 239, 216);
+    padding: 30px 40px;
+    margin: 20px;
+    width: 30%;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 1px 2px rgb(8, 239, 216);
+}
+.skil:hover{
+    background-color: rgb(29,29,29);
+    border: 1px solid #FD1056;
+    box-shadow: 1px 2px #FD1056;
+}
 @media (max-width: 1000px) {
     header nav{
         display: none;
     }
-    #third {
-        position: relative;
-        padding-top: 25px;
+    body{
+        text-align: center;
+        width: 100vw;
     }
+    #third img {
+        display: none;
+    }
+    #type{
+        width: 92%;
+    }
+    /* .container{
+        /* width: 92%; */
+    
+    .container input{
+        /* width: max-content; */
+
+
+    } 
     .hamburger{
         position: absolute;
         margin-top: -5px;
@@ -294,5 +340,7 @@ input{
     .hamburger.is-active:after{
         transform: rotate(45deg) translate(-9px, -5.4px);
     }
-    
+    .skill-row{
+        flex-direction: column;
+    }
 }
