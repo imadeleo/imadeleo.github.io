@@ -187,8 +187,8 @@ header a:hover{
     position: relative;
     width: max-content;
     margin-top: 50px;
-    transform: translateX(-17rem);
-    animation: fadeInUp 1s ease-out 7s forwards;
+    /* transform: translateX(-17rem);
+    animation: fadeInUp 1s ease-out 7s forwards; */
 }
   
 input{
@@ -293,21 +293,22 @@ div > svg{
     }
     body{
         text-align: center;
-        width: 100vw;
+        overflow-x: hidden;
+    }
+    #first{
+        font-size: 35px;
+        line-height: 59px;
     }
     #third img {
         display: none;
     }
-    #type{
-        width: 92%;
+    #second{
+        display: flex;
+        justify-content: center;
     }
-    /* .container{
-        /* width: 92%; */
-    
-    .container input{
-        /* width: max-content; */
-
-
+    .container{
+        margin: 40px;
+        
     } 
     .hamburger{
         position: absolute;
@@ -342,5 +343,8 @@ div > svg{
     }
     .skill-row{
         flex-direction: column;
+    }
+    .skil{
+        width: 100%;
     }
 }
