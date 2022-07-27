@@ -51,6 +51,7 @@ header a:hover{
 .menubar{
     position: fixed;
     left: 0;
+    margin-top: 50px;
     bottom: 100%;
     width: 100%;
     min-height: 100vh;
@@ -59,8 +60,6 @@ header a:hover{
     z-index: 1;
     padding-top: 150px;
     transition: 0.4s;
-    align-content: center;
-
 }
 .menubar.is-active {
     bottom: 0;
@@ -74,7 +73,6 @@ header a:hover{
     width: 100%;
     color: rgb(8, 239, 216);
     max-width: 200px; 
-    align-content: center;
 }
 .menubar a:hover{
     border-bottom: 1px solid #FD1056;
@@ -303,6 +301,10 @@ input{
     box-shadow: 1px 2px #FD1056;
 }
 @media (max-width: 1000px) {
+    header{
+        height: 7%;
+        padding-top: 30px;
+    }
     header nav{
         display: none;
     }
@@ -369,6 +371,95 @@ input{
     .skil{
         width: 91%;
     }
+}
+@media (max-width: 403px) {
+    header{
+        height: 11%;
+        padding-top: 20px;
+    }
+    .hamburger{
+        width: 15px;
+        margin-right: 10px;
+    }
+    .hamburger .bar, .hamburger:after, .hamburger:before{
+        height: 4px;
+        margin: 3px 0px;
+    }
+    .hamburger.is-active:after{
+        transform: rotate(45deg) translate(-4.7px, -1.5px);
+    }
+    #first{
+        font-size: 24px;
+    }
+    #second{
+        font-size: 16px;
+        letter-spacing: 3px;
+    }
+    #second .dynamic{
+        margin-left: 7px;
+        line-height: 20px;
+        height: 20px;
+    }
+    @keyframes slide{
+        100%{
+            top: -80px;
+        } 
+    }
+    .small-btn{
+        padding: 7px 9px;
+        letter-spacing: normal;
+    }
+    .svg{
+        padding-top: 40px;
+    }
+    #skills{
+        margin-top: -25px;
+        padding-top: 20px;
+    }
+
+}
+@media (max-width: 296px) {
+    header{
+        height: 10%;
+        padding-top: 20px;
+    }
+    .hamburger{
+        width: 15px;
+        margin-right: 10px;
+    }
+    .hamburger .bar, .hamburger:after, .hamburger:before{
+        height: 3px;
+        margin: 3px 0px;
+    }
+    .hamburger.is-active:after{
+        transform: rotate(45deg) translate(-4.7px, -1.5px);
+    }
+    #first{
+        font-size: 20px;
+        margin-top: -50px;
+        line-height: 45px;
+    }
+    #second .static{
+        display: none;
+        text-align: center;
+    }
+    .dynamic{
+        margin: -40px 0 -40px 0;
+    
+    }
+    .small-btn{
+        padding: 7px 9px;
+        letter-spacing: normal;
+        margin-top: -40px;
+    }
+    .svg{
+        padding-top: 40px;
+    }
+    #skills{
+        margin-top: -40px;
+        padding-top: 20px;
+    }
+
 }
 @media (min-width: 1001px) {
     .small-btn{
