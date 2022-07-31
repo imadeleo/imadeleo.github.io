@@ -21,7 +21,8 @@ header p{
 }
 header{
     display: flex;
-    position: relative;
+    position: fixed;
+    top: 0;
     padding-top: 30px;
     z-index: 2;
     background-color: #121212;
@@ -90,7 +91,7 @@ header a:hover{
     display: none;
 }
 #home{
-    margin: 90px 40px 40px 40px;
+    margin: 130px 40px 40px 40px;
     position: relative;
 }
 #first{
@@ -276,6 +277,7 @@ input{
 }
 #skills{
     background-color: #121212;
+    padding-bottom: 60px;
 }
 #skills h2{
     margin: 0px 20px 10px 20px;
@@ -299,6 +301,28 @@ input{
     background-color: rgb(29,29,29);
     border: 1px solid #FD1056;
     box-shadow: 1px 2px #FD1056;
+}
+footer{
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 80px;
+}
+#contact p{
+    font-style: italic;
+    color: #FD1056;
+    font-size: 22px;
+}
+#footer-icons{
+    margin-top: 30px;
+}
+#footer-icons a{
+    padding: 25px;
+    font-size: 30px;
+}
+#footer-icons a:hover{
+    border-bottom: 1px solid #FD1056;
+    background-color: transparent;
+    font-weight: 600;
 }
 @media (max-width: 1000px) {
     header nav{
@@ -412,6 +436,12 @@ input{
         margin-top: -25px;
         padding-top: 20px;
     }
+    #contact p{
+        font-size: 16px;
+    }
+    #footer-icons a{
+        padding: 10px;
+    }
 
 }
 @media (max-width: 296px) {
@@ -454,6 +484,14 @@ input{
     #skills{
         margin-top: -40px;
         padding-top: 20px;
+    }
+    #contact p{
+        font-size: 14px;
+        margin: -10px 10px;
+    }
+    #footer-icons a{
+        padding: 6px;
+        font-size: 20px
     }
 
 }
